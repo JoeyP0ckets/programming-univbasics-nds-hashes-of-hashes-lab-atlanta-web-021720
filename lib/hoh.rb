@@ -39,26 +39,26 @@ def naming_system
   genus = PORTION_3[:sub_category][:label]
   species = PORTION_4[:label]
   hoh = { 
-    :label => kingdom
+    
+    :label => kingdom,
+    :sub_category => {
+      :label => phylum, 
       :sub_category => {
-        :label => phylum 
-         :sub_category => {
-           :label => class_name
-             :sub_category => {
-               :label => order 
-                :sub_category => {
-                  :label => family
-                   :sub_category => {
-                     :label => genus 
-                      :sub_category => {
-                        :label => species
-                     }
-                  }
+        :label => class_name,
+        :sub_category => {
+          :label => order, 
+          :sub_category => {
+            :label => family,
+            :sub_category => {
+              :label => genus, 
+              :sub_category => {
+                :label => species
               }
-              
             }
-         }
-      }   
+          }
+        }
+      }
+    }   
   }
 
         
